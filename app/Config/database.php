@@ -64,10 +64,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '127.0.0.1',
-		'login' => 'homestead',
-		'password' => 'secret',
-		'database' => 'gigsmanager',
+		'host' => 'host',
+		'login' => 'login',
+		'password' => 'password',
+		'database' => 'database',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
@@ -82,4 +82,18 @@ class DATABASE_CONFIG {
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
+
+    public function __construct()
+    {
+        $this->default = array(
+            'datasource' => 'Database/Mysql',
+            'persistent' => false,
+            'host' => getenv('DB_HOST'),
+            'login' => getenv('DB_USER'),
+            'password' =>  getenv('DB_PASS'),
+            'database' =>  getenv('DB_NAME'),
+            'prefix' => '',
+            'encoding' => 'utf8',
+        );
+    }
 }
