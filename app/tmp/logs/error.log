@@ -1,0 +1,48 @@
+2015-10-17 20:57:40 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(3290): ConnectionManager::getDataSource('default')
+#3 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(3312): Model->setSource('gigs')
+#5 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#6 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1401): Model->schema()
+#7 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('date')
+#8 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(Gig), Array, Array)
+#9 /home/vagrant/Repo/gigsmanager/app/Controller/GigsController.php(33): PaginatorComponent->paginate('Gig')
+#10 [internal function]: GigsController->index('home')
+#11 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GigsController), Array)
+#12 /home/vagrant/Repo/gigsmanager/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /home/vagrant/Repo/gigsmanager/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GigsController), Object(CakeRequest), Object(CakeResponse))
+#14 /home/vagrant/Repo/gigsmanager/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-10-17 20:57:42 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /gigs
+Stack Trace:
+#0 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(3290): ConnectionManager::getDataSource('default')
+#3 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(3312): Model->setSource('gigs')
+#5 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#6 /home/vagrant/Repo/gigsmanager/lib/Cake/Model/Model.php(1401): Model->schema()
+#7 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Component/PaginatorComponent.php(398): Model->hasField('date')
+#8 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(Gig), Array, Array)
+#9 /home/vagrant/Repo/gigsmanager/app/Controller/GigsController.php(33): PaginatorComponent->paginate('Gig')
+#10 [internal function]: GigsController->index()
+#11 /home/vagrant/Repo/gigsmanager/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(GigsController), Array)
+#12 /home/vagrant/Repo/gigsmanager/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /home/vagrant/Repo/gigsmanager/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GigsController), Object(CakeRequest), Object(CakeResponse))
+#14 /home/vagrant/Repo/gigsmanager/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}

@@ -1,4 +1,4 @@
-<? print_r($playlist); ?>
+
 <h1>Pieces performed on <?=$this->Time->format('d/m/Y', $gig['Gig']['date'])?> at <?=$gig['Gig']['place']?></h1>
 
 <?php echo $this->Session->flash('flash', array('element' => 'success')); ?>
@@ -21,6 +21,6 @@
 			<td><?=$this->Form->end(array('label' => 'Save', 'div' =>false, 'class' => 'btn btn-default'));?><td>
 		</tr>
 	</tbody>
-	<? unset($composers); ?>
+	<?php unset($composers); ?>
 </table>
 

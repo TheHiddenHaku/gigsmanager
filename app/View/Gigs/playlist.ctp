@@ -19,7 +19,7 @@
 			<td colspan="2"><?=$this->Form->end(array('label' => 'Save', 'div' =>false, 'class' => 'btn btn-default'));?><td>
 		</tr>
 
-		<? foreach ($gig['Playlist'] as $playlist) : ?>
+		<?php foreach ($gig['Playlist'] as $playlist) : ?>
 		<tr>
 			<td><?=$playlist['title']?></td>
 			<td><?=$playlist['composer_name']?></td>
@@ -30,8 +30,8 @@
 			<?=$this->Form->postLink('Delete', array('controller' => 'gigs', 'action' => 'delete_playlist', $playlist['id']), array('class' => 'btn btn-danger btn-xs', 'confirm' => 'Are you sure you want to delete '.$playlist['title'].'?'))?>
 			<td>
 		</tr>
-		<? endforeach; ?>
+		<?php endforeach; ?>
 		
 	</tbody>
-	<? unset($composers); ?>
+	<?php unset($composers); ?>
 </table>

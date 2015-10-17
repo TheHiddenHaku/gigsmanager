@@ -25,7 +25,7 @@
 		<th>ATTENDED</th>
 		<th width="20%" colspan="3">ACTIONS</th>
 	</tr>
-	<? foreach ($composers as $composer) : ?>
+	<?php foreach ($composers as $composer) : ?>
 	<tr>
 		<td><?=$composer['Composer']['name']?></td>
 		<td><?=$composer['Composer']['surname']?></td>
@@ -40,6 +40,6 @@
 			<?=$this->Form->postLink('Delete', array('controller' => 'composers', 'action' => 'delete', $composer['Composer']['id']), array('class' => 'btn btn-danger btn-xs', 'confirm' => 'Are you sure you want to delete '.$composer['Composer']['surname'].'?'))?>
 		</td>
 	</tr>
-	<? endforeach; ?>
-	<? unset($composers); ?>
+	<?php endforeach; ?>
+	<?php unset($composers); ?>
 </table>

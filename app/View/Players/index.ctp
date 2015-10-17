@@ -24,7 +24,7 @@
 		<th>ATTENDED</th>
 		<th width="20%" colspan="3">ACTIONS</th>
 	</tr>
-	<? foreach ($players as $player) : ?>
+	<?php foreach ($players as $player) : ?>
 	<tr>
 		<td><?=$player['Player']['name']?></td>
 		<td><?=$player['Player']['surname']?></td>
@@ -40,7 +40,7 @@
 			<?=$this->Form->postLink('Delete', array('controller' => 'players', 'action' => 'delete', $player['Player']['id']), array('class' => 'btn btn-danger btn-xs', 'confirm' => 'Are you sure you want to delete '.$player['Player']['surname'].'?'))?>
 		</td>
 	</tr>
-	<? endforeach; ?>
+	<?php endforeach; ?>
 	<tr>
 		<td colspan="7">
 			<ul class="pagination">
@@ -52,5 +52,5 @@
 	        </ul>
     	</td>
 	</tr>
-	<? unset($players); ?>
+	<?php unset($players); ?>
 </table>

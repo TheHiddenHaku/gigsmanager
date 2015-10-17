@@ -2,9 +2,9 @@
 	Gigs List
 	<select name="year" id="year" class="form-control">
 		<option>Select Year</option>
-		<? foreach ($annate as $anno) : ?>
+		<?php foreach ($annate as $anno) : ?>
 		<option value="<?=$anno?>"><?=$anno?></option>
-		<? endforeach; ?>
+		<?php endforeach; ?>
 	</select>
 </h1>
 <?=$this->Html->link('Back', array('controller' => 'players', 'action' => 'index'), array('class' => 'btn btn-info btn-xs'))?>
@@ -20,16 +20,16 @@
 		</tr>
 	</thead>
 	<tbody>
-		<? foreach ($gigs as $gig) : ?>
+		<?php foreach ($gigs as $gig) : ?>
 		<tr>
 			<td><?=$this->Time->format('d/m/Y', $gig['Gig']['date'])?></td>
 			<td><?=$gig['Gig']['place']?></td>
 			<td><?=$gig['Gig']['organization']?></td>
 			<td><?=$gig['Gig']['title']?></td>
 			<td>
-				<? for ($i=0; $i<count($gig['Player']); $i++) : ?>
+				<?php for ($i=0; $i<count($gig['Player']); $i++) : ?>
 				<?=$gig['Player'][$i]['name']?> <?=$this->Html->link($gig['Player'][$i]['surname'], array('gigs' => 'players', 'action' => 'by_player', $gig['Player'][$i]['id']))?> -  
-			<? endfor; ?>
+			<?php endfor; ?>
 			</td>
 			<td>
 				<?=$this->Html->link('View', array('controller' => 'gigs', 'action' => 'view', $gig['Gig']['id']), array('class' => 'btn btn-info btn-xs'))?>
@@ -44,9 +44,9 @@
 				<?=$this->Form->postLink('Delete', array('controller' => 'gigs', 'action' => 'delete', $gig['Gig']['id']), array('class' => 'btn btn-danger btn-xs', 'confirm' => 'Are you sure you want to delete '.$gig['Gig']['title'].'?'))?>
 			</td>
 		</tr>
-		<? endforeach; ?>
+		<?php endforeach; ?>
 	</tbody>
 	
-	<? unset($gigs); ?>
+	<?php unset($gigs); ?>
 </table>
 
