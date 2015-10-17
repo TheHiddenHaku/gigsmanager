@@ -14,7 +14,7 @@
 
 		public function getAnnate()
 		{
-			$tmp = $this->Gig->query('SELECT DISTINCT Year(Gig.date) AS year FROM gigsmanager.gigs AS Gig WHERE 1 = 1 GROUP BY year');
+			$tmp = $this->Gig->query('SELECT DISTINCT Year(Gig.date) AS year FROM gigs AS Gig WHERE 1 = 1 GROUP BY year');
 			$annate = array();
 
 			for($i=0; $i<count($tmp); $i++)
