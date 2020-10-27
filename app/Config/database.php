@@ -64,10 +64,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'host',
-		'login' => 'login',
-		'password' => 'password',
-		'database' => 'database',
+		'host' => '127.0.0.1',
+		'login' => 'forge',
+		'password' => 'daj7nLPR180lIMCzQgZV',
+		'database' => 'gigsmanager',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);
@@ -88,10 +88,10 @@ class DATABASE_CONFIG {
         $this->default = array(
             'datasource' => 'Database/Mysql',
             'persistent' => false,
-            'host' => getenv('DB_HOST'),
-            'login' => getenv('DB_USER'),
-            'password' =>  getenv('DB_PASS'),
-            'database' =>  getenv('DB_NAME'),
+			'host' => '127.0.0.1',
+			'login' => 'forge',
+			'password' => 'daj7nLPR180lIMCzQgZV',
+			'database' => 'gigsmanager',
             'prefix' => '',
             'encoding' => 'utf8',
         );
