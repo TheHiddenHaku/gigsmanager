@@ -46,3 +46,12 @@ Stack Trace:
 #13 /home/vagrant/Repo/gigsmanager/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GigsController), Object(CakeRequest), Object(CakeResponse))
 #14 /home/vagrant/Repo/gigsmanager/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #15 {main}
+2020-10-22 21:28:54 Error: Fatal Error (64): Cannot use 'Object' as class name as it is reserved in [/Users/abottiroli/Sites/gigsmanager-cake/lib/Cake/Core/Object.php, line 31]
+2020-10-22 21:28:54 Error: [InternalErrorException] Internal Server Error
+Request URL: /
+Stack Trace:
+#0 /Users/abottiroli/Sites/gigsmanager-cake/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(64, 'Cannot use 'Obj...', '/Users/abottiro...', 31)
+#1 /Users/abottiroli/Sites/gigsmanager-cake/lib/Cake/Core/App.php(931): ErrorHandler::handleError(64, 'Cannot use 'Obj...', '/Users/abottiro...', 31, Array)
+#2 /Users/abottiroli/Sites/gigsmanager-cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
