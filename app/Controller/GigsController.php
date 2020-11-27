@@ -105,8 +105,7 @@
 		public function playlist($id = null)
 		{
 
-		    print_r($id);
-		    die();
+
 
 			if (!$id) {
 		        throw new NotFoundException(__('invalid Gig'));
@@ -130,6 +129,8 @@
 			$this->set('composers', $composers);
 
 		    if ($this->request->is('post')) {
+                print_r($this->request->data);
+                die();
             	$this->Playlist->create();
             	if ($this->Playlist->saveAll($this->request->data)) {
                 	$this->Session->setFlash(__('New piece succesfully saved!'));
