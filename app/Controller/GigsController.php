@@ -104,6 +104,10 @@
 
 		public function playlist($id = null)
 		{
+
+		    print_r($id);
+		    die();
+
 			if (!$id) {
 		        throw new NotFoundException(__('invalid Gig'));
 		    }
